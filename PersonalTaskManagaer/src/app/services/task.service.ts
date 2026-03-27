@@ -27,6 +27,6 @@ export class Task {
 
   deleteTask(id: number) {
     this.tasks = this.tasks.filter(task => task.id !== id);
-  }
+  } 
 }
 
