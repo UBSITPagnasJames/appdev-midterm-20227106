@@ -7,20 +7,21 @@ import { TaskAdd } from './Components/TaskAddComponent/task-add';
 import { TaskEdit } from './Components/TaskEditComponent/task-edit';
 
 export const routes: Routes = [
-    {path: 'navi', component: Navi},
-    {path: 'TaskListComponent', component: TaskList},
-    {path: 'Add', component: TaskAdd },
-    {path: 'task/:id',
-        component: TaskDetail,
-        children: [
-            {path: 'info', component: TaskInfo},
-            {path: 'edit', component: TaskEdit}
-        ]
-    
+    { path: 'navi', component: Navi },
+    { path: 'task-list', component: TaskList },
+    { path: 'task-add', component: TaskAdd },
+    {
+      path: 'task/:id',
+      component: TaskDetail,
+      children: [
+        { path: 'info', component: TaskInfo },
+        { path: 'edit', component: TaskEdit },
+        { path: '', redirectTo: 'info', pathMatch: 'full' }, 
+      ],
+    },
+    { path: '', redirectTo: '/task-list', pathMatch: 'full' },
+    { path: '**', redirectTo: '/task-list' },
 
-
-}
-    
 
 
 

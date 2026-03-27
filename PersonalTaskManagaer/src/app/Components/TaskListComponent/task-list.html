@@ -1,1 +1,22 @@
-<p>task-list works!</p>
+<h3>Task List</h3>
+
+<table class="table table-bordered table-striped mt-3">
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Due Date</th>
+      <th>Status</th>
+      <th>Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.dueDate }}</td>
+      <td>{{ task.status }}</td>
+      <td>{{ task.priority }}</td>
+    </tr>
+  </tbody>
+</table>

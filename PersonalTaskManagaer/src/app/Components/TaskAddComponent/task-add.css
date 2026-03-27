@@ -1,0 +1,16 @@
+.task-form {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn-success {
+    padding: 8px 20px;
+    cursor: pointer;
+  }

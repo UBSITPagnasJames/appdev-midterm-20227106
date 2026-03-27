@@ -1,1 +1,21 @@
-<p>task-edit works!</p>
+<h3>Edit Task</h3>
+
+    <form *ngIf="task" (ngSubmit)="save()">
+      <input [(ngModel)]="task.title" name="title" class="form-control mb-2" />
+      <textarea [(ngModel)]="task.description" name="description" class="form-control mb-2"></textarea>
+      <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control mb-2" />
+
+      <select [(ngModel)]="task.status" name="status" class="form-control mb-2">
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+
+      <select [(ngModel)]="task.priority" name="priority" class="form-control mb-2">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+
+      <button class="btn btn-primary">Update</button>
+    </form>
