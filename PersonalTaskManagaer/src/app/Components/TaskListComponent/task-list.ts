@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '../../../../node_modules/@angular/router/types/_router_module-chunk';
+import { RouterLink } from '@angular/router';
 import { Task } from '../../services/task.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { Task } from '../../services/task.service';
 export class TaskList {
   tasks = this.taskService.getTasks();
 
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: Task) {}
 
   delete(id: number) {
     this.taskService.deleteTask(id);
